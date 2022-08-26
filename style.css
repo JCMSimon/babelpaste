@@ -8,6 +8,8 @@
 	justify-content: center;
 }
 
+@import url(//db.onlinewebfonts.com/c/ea08883bf947751b7d953f37d4eb5d05?family=Malgun+Gothic);
+
 .mainContainer {
 	display: flex;
 	flex-direction: column;
@@ -16,12 +18,26 @@
 }
 
 .pageTitle {
-	color: red;
 	font-size: 15vh;
 	margin: 10px;
-	animation: rainbow 10s infinite linear;
 	margin-top:8%;
+	background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(206,183,141,1) 6%, rgba(145,94,0,1) 85%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
 }
+
+
+.pageTitle::after {
+	position:relative;
+	font-size: 15pt;
+	content: "Made by JCMS";
+	background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(206,183,141,1) 6%, rgba(145,94,0,1) 85%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+}
+
 
 .PasteArea {
 	border-radius: 5px;
@@ -29,7 +45,7 @@
 	outline: none;
 	background: #201c29;
 	color:white;
-	content: "";
+	caret-color: transparent;
 }
 
 .PasteArea::placeholder {
@@ -44,15 +60,26 @@
 
 
 .submitButton {
+	font-family: "Malgun Gothic";
 	background:#201c29;
-	color:white;
 	font-size:5vh;
+	color: #00FF59;
 }
 
 .infoButton {
 	background:#201c29;
-	color:white;
 	font-size:4vh;
+	color:white;
+}
+
+
+.infoButton:after {
+	font-size:5vh;
+	content: "🛈";
+	background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(206,183,141,1) 6%, rgba(145,94,0,1) 85%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
 }
 
 .submitButton:active {
@@ -65,21 +92,4 @@
 
 .noselect {
 	user-select: none;
-}
-
-
-@keyframes rainbow {
-	12.5% {color:red;}
-	25% {color: orange;}
-	37.5% {color: yellow;}
-	50% {color: green;}
-	62.5% {color: cyan;}
-	75% {color: blue;}
-	87.5% {color: purple;}
-	100% {color: red};
-
-
-	0% { color: red; }
-	50% { color: blue; }
-	100% { color: red; }
 }

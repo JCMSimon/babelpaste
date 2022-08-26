@@ -12,20 +12,19 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="style.css">
-	<script src="index.js" defer></script>
+	<link rel="stylesheet" href="style-info.css">
 </head>
 <body>
 	<div class="mainContainer">
-		<h1 class="pageTitle noselect" >Babelpaste</h1>
-		<textarea name="PasteArea" autocorrect="off" placeholder="Put your paste here!" cols="120" rows="25" maxlength="3200" autofocus class="PasteArea noselect"></textarea>
-		<br></br>
-		<div class="buttons noselect">
-			<a href="info.html">
-				<button id="infoButton"  class="infoButton"></button>
-			</a>
-			<button id="submitButton" class="submitButton">Create Paste</button>
-		</div>
+		<h1 class="pageTitle noselect" >Info</h1>
+		<h2 class="ruleTitle">Test</h2>
+		<h3 class="quoteText">The library contains only lower-case letters, space, comma, and period.</h3>
+		<ol>
+			<li>Numbers will be converted to their word equivalent</li>
+			<li>Uppercase letters will be sourrounded with perids ("Simon" => ".s.imon")</li>
+			<li>"!"§$%&/()=?\}][{^°<>|;:-_#'´`"^will be converted to short word equivalents</li>
+			<li>All other characters will be stripped from the paste</li>
+		</ol>
 	</div>
 </body>
 </html>
