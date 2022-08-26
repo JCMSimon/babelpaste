@@ -1,10 +1,26 @@
+/* Config */
+:root {
+	/* Background */
+	--Background-Image: url("images/background.png");
+	--Bacgkround-Overlay-Gradient: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.7));
+	/* Text Color */
+	--Main-Text-Gradient: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(206,183,141,1) 6%, rgba(145,94,0,1) 85%);
+	/* Button */
+	/* Also used for Paste Area Background */
+	--Background-Color: #201c29;
+	--Background-Color-Active: #2f293d;
+	/* Marker */
+	--Marker-Color: #463d5c;
+}
+
+
 /* Import Font */
 @import url(//db.onlinewebfonts.com/c/ea08883bf947751b7d953f37d4eb5d05?family=Malgun+Gothic);
 
 /* Setup Background */
 .body,html {
-	background:	linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.7)),
-				url("images/background.png");
+	background:	var(--Bacgkround-Overlay-Gradient),
+				var(--Background-Image);
 				background-position: center center;
 				background-size: cover;
 	display: flex;
@@ -25,7 +41,7 @@
 	margin-top: 60px;
 	margin-bottom: 20px;
 	font-size: 110pt;
-	background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(206,183,141,1) 6%, rgba(145,94,0,1) 85%);
+	background: var(--Main-Text-Gradient);
 	background-clip: text;
 	-webkit-background-clip: text;
 	color: transparent;
@@ -40,16 +56,27 @@
 }
 
 .ruleListItem {
-	color:white
+	color:white;
+	text-align: center;
+	list-style: none;
+	line-height: 25px;
 }
 
 .tableTitle {
+	border: 5px solid;
+	border-color: var(--Background-Color-Active);
 	color:white;
+	min-width:91%;
+	min-height:40px;
+	text-align: center;
+	background-color: var(--Background-Color);
+	margin-bottom: 0;
+	padding-top: 10px;
 }
 
 .backButton {
 	font-size:30pt;
-	background: #201c29;
+	background: var(--Background-Color);
 }
 
 .backButton:hover {
@@ -58,20 +85,74 @@
 
 .backButton:after {
 	font-family: "Malgun Gothic";
-	content: "Back to Home";
+	content: "Back";
 	font-size:35pt;
-	background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(206,183,141,1) 6%, rgba(145,94,0,1) 85%);
+	background: var(--Main-Text-Gradient);
 	background-clip: text;
 	-webkit-background-clip: text;
 	color: transparent;
 }
 
 .backButton:active {
-	background:#2f293d;
+	background: var(--Background-Color-Active);
 }
 
 .githubLink {
 	margin-top: 10px;
 	color:white;
 	text-decoration-line: none;
+}
+
+.translationTable {
+	border: 5px solid;
+	background: var(--Background-Color);
+	border-color: var(--Background-Color-Active);
+}
+
+.specialMark {
+	background-color: transparent;
+	color: red;
+	animation: rainbow 10s infinite linear;
+}
+
+.tableContainer {
+	display:flex;
+	flex-direction: row;
+}
+
+.leftTableItem {
+	max-width:30%;
+	text-align: center;
+	color: white
+
+}
+
+.middleTableItem{
+	max-width:30%;
+	text-align: center;
+	color: white
+
+}
+
+
+.rightTableItem {
+	max-width:30%;
+	text-align: center;
+	color: white
+
+}
+
+
+@keyframes rainbow {
+	12.5% {color:red;}
+	25% {color: orange;}
+	37.5% {color: yellow;}
+	50% {color: green;}
+	62.5% {color: cyan;}
+	75% {color: blue;}
+	87.5% {color: purple;}
+	100% {color: red};
+	0% { color: red; }
+	50% { color: blue; }
+	100% { color: red; }
 }
