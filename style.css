@@ -6,8 +6,6 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height: 100%;
-	width: 100%;
 }
 
 .mainContainer {
@@ -17,27 +15,71 @@
 	justify-content: center;
 }
 
-.title {
-	color: white;
+.pageTitle {
+	color: red;
+	font-size: 15vh;
+	margin: 10px;
+	animation: rainbow 10s infinite linear;
+	margin-top:8%;
 }
 
-.form {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+.PasteArea {
+	border-radius: 5px;
+	resize: none;
+	outline: none;
+	background: #201c29;
+	color:white;
+	content: "";
 }
 
-.inputField {
-	border-radius: 10px;
-	width: 50vw;
-	height: 3vh;
-	background: gray
+.PasteArea::placeholder {
+	text-align: center;
+	padding-top: 18%;
+	font-size: 4vh;
 }
+
+.PasteArea:hover::placeholder {
+	color: lightgray;
+}
+
 
 .submitButton {
-	border-radius: 10px;
-	width: 50vw;
-	height: 3vh;
+	background:#201c29;
+	color:white;
+	font-size:5vh;
 }
 
+.infoButton {
+	background:#201c29;
+	color:white;
+	font-size:4vh;
+}
+
+.submitButton:active {
+	background:#2f293d;
+}
+
+.infoButton:active {
+	background:#2f293d;
+}
+
+.noselect {
+	user-select: none;
+}
+
+
+@keyframes rainbow {
+	12.5% {color:red;}
+	25% {color: orange;}
+	37.5% {color: yellow;}
+	50% {color: green;}
+	62.5% {color: cyan;}
+	75% {color: blue;}
+	87.5% {color: purple;}
+	100% {color: red};
+
+
+	0% { color: red; }
+	50% { color: blue; }
+	100% { color: red; }
+}
