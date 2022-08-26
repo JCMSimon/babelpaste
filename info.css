@@ -1,0 +1,77 @@
+/* Import Font */
+@import url(//db.onlinewebfonts.com/c/ea08883bf947751b7d953f37d4eb5d05?family=Malgun+Gothic);
+
+/* Setup Background */
+.body,html {
+	background:	linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.7)),
+				url("images/background.png");
+				background-position: center center;
+				background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Center EVERYTHING */
+.mainContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Page Title */
+.pageTitle {
+	margin-top: 60px;
+	margin-bottom: 20px;
+	font-size: 110pt;
+	background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(206,183,141,1) 6%, rgba(145,94,0,1) 85%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+}
+
+.ruleTitle {
+	color:white;
+}
+
+.quoteText {
+	color:white;
+}
+
+.ruleListItem {
+	color:white
+}
+
+.tableTitle {
+	color:white;
+}
+
+.backButton {
+	font-size:30pt;
+	background: #201c29;
+}
+
+.backButton:hover {
+	cursor: pointer;
+}
+
+.backButton:after {
+	font-family: "Malgun Gothic";
+	content: "Back to Home";
+	font-size:35pt;
+	background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(206,183,141,1) 6%, rgba(145,94,0,1) 85%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+}
+
+.backButton:active {
+	background:#2f293d;
+}
+
+.githubLink {
+	margin-top: 10px;
+	color:white;
+	text-decoration-line: none;
+}

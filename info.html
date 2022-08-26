@@ -4,27 +4,39 @@
 <head>
 	<title>Babelpaste</title>
 	<meta name="description" content="Bulletproof Paste Service based on the library of babel.">
-    <meta content="Babelpaste" property="og:title" />
+    <!-- Discord Embed -->
+	<meta content="Babelpaste" property="og:title" />
     <meta content="Bulletproof Paste Service based on the library of babel." property="og:description" />
     <meta content="https://jcms.dev/babelpaste" property="og:url" />
     <meta content="https://jcms.dev/babelpaste/images/background.png" property="og:image" />
     <meta content="#570861" data-react-helmet="true" name="theme-color" />
+	<!-- SEO Tags -->
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="style-info.css">
+	<!-- Links -->
+	<link rel="stylesheet" href="info.css">
+	<link rel="stylesheet" href="utils.css">
 </head>
 <body>
-	<div class="mainContainer">
-		<h1 class="pageTitle noselect" >Info</h1>
-		<h2 class="ruleTitle">Test</h2>
-		<h3 class="quoteText">The library contains only lower-case letters, space, comma, and period.</h3>
+	<div class="mainContainer noselect">
+		<h1 class="pageTitle" >Info</h1>
+		<h2 class="ruleTitle">Due to the nature of using libraryofbabel.info there are a few limitations.</h2>
+		<h3 class="quoteText">"The library contains only lower-case letters, space, comma, and period."</h3>
 		<ol>
-			<li>Numbers will be converted to their word equivalent</li>
-			<li>Uppercase letters will be sourrounded with perids ("Simon" => ".s.imon")</li>
-			<li>"!"§$%&/()=?\}][{^°<>|;:-_#'´`"^will be converted to short word equivalents</li>
-			<li>All other characters will be stripped from the paste</li>
+			<li class="ruleListItem">"!"§$%&/()=?\}][{^°<>|;:-_#'´`"will be converted to short word equivalents</li>
+			<li class="ruleListItem">Uppercase letters will be sourrounded with perids ("Simon" => ".s.imon")</li>
+			<li class="ruleListItem">Numbers will be converted to their word equivalent</li>
+			<li class="ruleListItem">All other characters will be stripped from the paste</li>
+			<li class="ruleListItem">Max Paste Length is 3200 Chars</li>
 		</ol>
+		<h2 class="tableTitle">See specific Translations below</h2>
+		<!-- Insert Table here inside fold out element or smth -->
+		<a href="index.html">
+			<button class="backButton"></button>
+		</a>
+		<a href="https://github.com/JustCallMeSimon26/babelpaste" class="githubLink">View the Code at Github</a>
+
 	</div>
 </body>
 </html>

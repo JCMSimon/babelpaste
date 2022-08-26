@@ -1,0 +1,141 @@
+/* Config */
+:root {
+	/* Background */
+	--Background-Image: url("images/background.png");
+	--Bacgkround-Overlay-Gradient: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.7));
+	/* Text Color */
+	--Main-Text-Gradient: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(206,183,141,1) 6%, rgba(145,94,0,1) 85%);
+	/* Button */
+	/* Also used for Paste Area Background */
+	--Background-Color: #201c29;
+	--Background-Color-Active: #2f293d;
+}
+
+/* Import Font */
+@import url(//db.onlinewebfonts.com/c/ea08883bf947751b7d953f37d4eb5d05?family=Malgun+Gothic);
+
+/* Setup Background */
+.body,html {
+	background:	var(--Bacgkround-Overlay-Gradient),
+				var(--Background-Image);
+				background-position: center center;
+				background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Center EVERYTHING */
+.mainContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Page Title */
+.pageTitle {
+	margin-top: 60px;
+	margin-bottom: 20px;
+	font-size: 110pt;
+	background: var(--Main-Text-Gradient);
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+}
+
+/* Advertising */
+.pageTitle::after {
+	content: "Made by JCMS";
+	font-size: 20pt;
+	background: var(--Main-Text-Gradient);
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+}
+
+/* Link back to same page cause for some reason people do that idk */
+.titleLink {
+	text-decoration-line: none;
+}
+
+/* Area where paste gets... pasted */
+.PasteArea {
+	border-radius: 10px;
+	resize: none;
+	outline: none;
+	background: var(--Background-Color);
+	caret-color: transparent;
+	color:white;
+}
+
+/* Info Text for the Paste Area */
+.PasteArea::placeholder {
+	text-align: center;
+	padding-top: 18%;
+	font-size: 30pt;
+}
+
+.PasteArea:hover::placeholder {
+	color: lightgray;
+}
+
+.alertText {
+	margin-top:5px;
+	margin-bottom:5px;
+	color:red;
+	font-size: 20pt;
+
+}
+
+/* Use this later for fancy Buttons */
+.buttons {
+	display: flex;
+	flex-direction: row;
+}
+
+/* Create Paste Button */
+.submitButton {
+	font-family: "Malgun Gothic";
+	background:var(--Background-Color);
+	font-size:30pt;
+	color: #00FF59;
+}
+
+.submitButton:hover {
+	cursor: pointer;
+}
+.submitButton:active {
+	background:var(--Background-Color-Active);
+}
+
+/* Button linking to info page */
+.infoButton {
+	margin-right: 10px;
+	background:var(--Background-Color);
+	color:white;
+}
+
+.infoButton:hover {
+	cursor: pointer;
+}
+
+.infoButton:after {
+	content: "🛈";
+	font-size:35pt;
+	background: var(--Main-Text-Gradient);
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+}
+
+.infoButton:active {
+	background:var(--Background-Color-Active);
+}
+
+/* Github Link cause yes */
+.githubLink {
+	margin-top: 10px;
+	color:white;
+	text-decoration-line: none;
+}
