@@ -9,7 +9,6 @@ const alertText = document.getElementById("alertText")
 
 attachEventListeners();
 
-
 function submitButtonFunction() {
 	console.log("Do actual paste logic here");
 	clearAlert();
@@ -39,14 +38,14 @@ function submitButtonFunction() {
 	// 		setTextField(rawPasteText)
 	// if false
 	try {
-		let hex,wall,shelf,volume,page = postSearchRequest(finishedPasteText);
+		let hex, wall, shelf, volume, page = postSearchRequest(finishedPasteText);
 	}
 	catch {
 		setAlert("smth went wrong (contact info here)")
 		activateButtons();
 	}
 	try {
-		let title = postBookmarkRequest(hex,wall,shelf,volume,page)
+		let title = postBookmarkRequest(hex, wall, shelf, volume, page)
 	}
 	catch {
 		setAlert("smth went wrong (contact info here)")
@@ -78,7 +77,7 @@ function postSearchRequest(term) {
 	console.log("do the fetch thing here")
 }
 
-function postBookmarkRequest(hex,wall,shelf,volume,page,title="") {
+function postBookmarkRequest(hex, wall, shelf, volume, page, title = "") {
 	console.log("do the fetch thing here 2.0")
 }
 
@@ -99,5 +98,5 @@ function clearAlert() {
 }
 
 function attachEventListeners() {
-	submitButton.addEventListener('click',submitButtonFunction);
+	submitButton.addEventListener('click', submitButtonFunction);
 }
