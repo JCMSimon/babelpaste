@@ -110,7 +110,7 @@ function postSearchRequest(term) {
 		method: 'POST',
 		redirect: 'follow'
 	  };
-	  fetch(`http://www.whateverorigin.org/get?url=https://libraryofbabel.info/search.cgi?find=${term}`, requestOptions)
+	  fetch(`https://www.whateverorigin.org/get?url=https://libraryofbabel.info/search.cgi?find=${term}`, requestOptions)
 		.then(response => response.text())
 		.then(result => console.log(result))
 		.catch(error => console.log('error', error));
