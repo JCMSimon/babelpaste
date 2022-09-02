@@ -51,19 +51,20 @@ function submitButtonFunction() {
 		setAlert("Smth went wrong (JCMS#0557)")
 		activateButtons();
 	}
+	if (finishedPasteText.length > 3200) {
+		setAlert("Text too long after Conversion");
+		activateButtons();
+		return;
+	}
 	console.log(finishedPasteText)
-	// check if text is over 3200 chars
-	// if true
-	//		setAlert("Paste too long after conversion")
-	// 		setTextField(rawPasteText)
-	// if false
-	// try {
-	// 	let hex, wall, shelf, volume, page = postSearchRequest(finishedPasteText);
-	// }
-	// catch {
-	// 	setAlert("smth went wrong (contact info here)")
-	// 	activateButtons();
-	// }
+	try {
+		let idk = postSearchRequest(finishedPasteText);
+		// let hex, wall, shelf, volume, page = postSearchRequest(finishedPasteText);
+	}
+	catch {
+		setAlert("smth went wrong (contact info here)")
+		activateButtons();
+	}
 	// try {
 	// 	let title = postBookmarkRequest(hex, wall, shelf, volume, page)
 	// }
@@ -79,11 +80,11 @@ function submitButtonFunction() {
 
 function convertPaste(rawpasteText) {
 	let mapping = {".in.":"9",".ig.":"8",".ev.":"7",".x.":"6",".iv.":"5",".ou.":"4",".re.":"3",".t.":"2",".n.":"1",".er.":"0",".ex.":"!",".es.":"?",".qu.":'"',".pa.":"§",".do.":"$",".pe.":"%",".a.":"&",".eq.":"=",".fs.":"/",".bs.":"\\",".bo.":"(",".bc.":")",".cbc.":"}",".cbo.":"{",".sbc.":"]",".sbo.":"[",".ca.":"^",".de.":"°",".ls.":"<",".gt.":">",".or.":"|",".se.":";",".co.":":",".mi.":"-",".un.":"_",".ha.":"#",".sq.":"'",".fa.":"´",".fb.":"`",".pl.":"+",".st.":"*",".ti.":"~"};
-	var result = ""
+	let result = rawpasteText
 	for(let key in mapping) {
 		var value = mapping[key];
 		console.log(`Replacing ${value} with ${key}`);
-		result = rawpasteText.replace(`${value}`,`${key}`)
+		result = result.replaceAll(`${value}`,`${key}`)
 		console.log(result)
 	  }
 	  return result
@@ -105,6 +106,7 @@ function getTextFromField() {
 
 function postSearchRequest(term) {
 	console.log("do the fetch thing here")
+	
 }
 
 function postBookmarkRequest(hex, wall, shelf, volume, page, title = "") {

@@ -65,7 +65,7 @@
 	resize: none;
 	outline: none;
 	background: var(--Background-Color);
-	caret-color: transparent;
+	caret-color: #A17525;
 	color:white;
 }
 
