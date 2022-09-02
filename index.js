@@ -106,7 +106,14 @@ function getTextFromField() {
 
 function postSearchRequest(term) {
 	console.log("do the fetch thing here")
-	
+	var requestOptions = {
+		method: 'POST',
+		redirect: 'follow'
+	  };
+	  fetch(`https://libraryofbabel.info/search.cgi?find=${term}`, requestOptions)
+		.then(response => response.text())
+		.then(result => console.log(result))
+		.catch(error => console.log('error', error));
 }
 
 function postBookmarkRequest(hex, wall, shelf, volume, page, title = "") {
